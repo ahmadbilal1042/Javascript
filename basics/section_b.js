@@ -13,8 +13,8 @@ if (loginStatus) {
 // Q7. Declare a constant tax rate using const and attempt to change its value.
 
 const taxRate = 10;
-// taxRate = 20;  // Error Cant Change const
-// console.log(taxRate) //Uncaught TypeError: Assignment to constant variable. (Throws Error)
+taxRate = 20;  // Error Cant Change const
+console.log(taxRate) //Uncaught TypeError: Assignment to constant variable. (Throws Error)
 
 // Q8. Store a cart total in a variable, update the value, and display the result.
 
@@ -27,15 +27,15 @@ console.log(cart)
 
 // Q9. Swap the values of two variables without using a third variable.
 
-let a = 1;
+let aa = 1;
 let b = 2;
-let z = a;
+let z = aa;
 b = z;
 console.log("1st", b)
 b = 2;
 z = b;
-a = z;
-console.log("2nd", a)
+aa = z;
+console.log("2nd", aa)
 
 
 // Q10. Show the difference between var and let scope with an example.
