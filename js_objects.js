@@ -128,3 +128,68 @@ function averageNumber(student) {
 console.log(averageNumber(studentObj))
 
 
+studentObj.fullName()
+
+
+// Create a user object with properties firstName, lastName, and email. Add a method getFullName() that returns the full name using this, and another method getUpperCaseName() that returns the full name in uppercase using a JavaScript string method. Then, access and print the result of both methods by calling them with parentheses, and also log what happens when you access one of the methods without parentheses.
+
+const user = {
+    firstName: "Ali",
+    lastName: "Haider",
+    email: "ali@gmail.com",
+}
+
+user.getFullName = function () {
+    return `${this.firstName} ${this.lastName}`
+}
+user.getUpperCaseName = function () {
+    let name = `${this.firstName} ${this.lastName}`
+    return name.toUpperCase();
+}
+
+console.log(user.getFullName())
+console.log(user.getFullName)
+console.log(user.getUpperCaseName())
+console.log(user.getUpperCaseName)
+
+// Problem 1 – Display Object Properties Manually
+
+// Create a person object with properties name, age, and city. Display all property values in a single string by accessing each property individually (not using loops or built-in object methods).
+
+
+const user1 = {
+    name: "Ali",
+    age: 23,
+    city: "Lahore"
+}
+console.log(`${user1.name} ${user1.age} ${user1.city}`)
+
+// Problem 2 – Display Object Using Loop
+
+// Create a student object with properties name, rollNumber, and grade. Use a for...in loop to collect and display all property values in one string. Make sure you access properties correctly using bracket notation.
+
+
+const student1 = {
+    name: "Ali",
+    rollNumber: 23,
+    grade: "A"
+}
+for (let value in student1) {
+    let text = student1[value];
+    console.log(text)
+}
+
+
+// Problem 3 – Display Object Using Built-in Methods
+// Create a product object with properties title, price, and category.
+// Convert the object values into an array using Object.values() and display them as a string.
+// Convert the entire object into a JSON string using JSON.stringify() and display the result.
+
+const product1 = {
+    title: "title",
+    price: 2000,
+    category: "Jin"
+}
+let objArray = Object.values(product1)
+console.log(objArray.toString());
+
