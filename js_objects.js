@@ -96,3 +96,35 @@ function returnBook(book) {
     book.availability = true;
     return book;
 }
+
+
+// Create a student object that includes firstName, lastName, age, grades (array), a nested contact object with email and phone, and a nationality property with default value "Pakistani". Access and print the student’s full name using both dot and bracket notation, then add a new property city and delete the age property. Finally, access the student’s phone number from the nested contact object and calculate the average of the grades array to display it. This single task combines property access, adding/deleting properties, nested objects, and working with arrays inside objects.
+
+const studentObj = {
+    firstName: "Ahmad",
+    lastName: "Bilal",
+    age: 23,
+    grades: [23, 23, 23],
+    contact: {
+        email: "ahmad@gmail.com",
+        phone: +923056728919
+    },
+    nationality: "Pakistan"
+}
+
+console.log(`Name is ${studentObj.firstName} ${studentObj.lastName}.`)
+console.log(`Name is ${studentObj["firstName"]} ${studentObj["lastName"]}.`);
+studentObj.city = "Lahore";
+delete studentObj.age;
+console.log(studentObj);
+function averageNumber(student) {
+    let sum = 0;
+    for (let i = 0; i < student.grades.length; i++) {
+        sum += student.grades[i]
+    }
+    return sum / student.grades.length;
+}
+
+console.log(averageNumber(studentObj))
+
+
